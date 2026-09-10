@@ -1,0 +1,264 @@
+@use '../abstracts/mixins' as *;
+
+.hero-banner {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+  &__container {
+    width: 100%;
+    max-width: 72rem;
+    margin: 0 auto;
+  }
+
+  &__grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include respond-to('lg') {
+      flex-direction: row;
+    }
+  }
+
+  // --- Sección de Imagen y Burbuja ---
+  &__media {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+
+    @include respond-to('lg') {
+      width: auto;
+      justify-content: flex-end;
+    }
+  }
+
+  &__avatar-wrapper {
+    position: relative;
+    top: 2.5rem;
+  }
+
+  &__image {
+    width: auto;
+    height: auto;
+    max-width: 28rem;
+
+    &--absolute {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__tooltip {
+    position: relative;
+    display: inline-block;
+
+    &--mobile {
+      z-index: 10;
+      margin-bottom: 2rem;
+
+      @include respond-to('lg') {
+        display: none;
+      }
+    }
+
+    &--desktop {
+      display: none;
+
+      @include respond-to('lg') {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+
+    &--mobile {
+      top: 1.25rem;
+      transform: rotate(280deg);
+    }
+
+    &--desktop {
+      left: -10px;
+      top: -50px;
+    }
+  }
+
+  &__greeting-box {
+    position: relative;
+    padding-left: 5rem;
+
+    &--desktop {
+      bottom: 40px;
+    }
+  }
+
+  &__greeting-text {
+    color: var(--text-primary);
+    font-size: 1.125rem;
+    white-space: nowrap;
+  }
+
+  // &__arrow-pointer {
+  //   position: absolute;
+  //   bottom: -0.5rem;
+  //   width: 0;
+  //   height: 0;
+  //   border-left: 8px solid transparent;
+  //   border-right: 8px solid transparent;
+  //   border-top: 8px solid rgba(255, 255, 255, 0.1);
+
+  //   &--centered {
+  //     left: 50%;
+  //     transform: translateX(-50%);
+  //   }
+
+  //   &--left {
+  //     left: 2rem;
+  //   }
+  // }
+
+  // --- Contenido de Texto ---
+  &__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+
+    @include respond-to('lg') {
+      text-align: left;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.5rem;
+    padding-left: 5rem;
+  }
+
+  &__title {
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    color: var(--text-primary);
+    line-height: 1.15;
+    padding-left: 5rem;
+
+    @include respond-to('lg') {
+      font-size: 4.5rem;
+    }
+  }
+
+  &__highlight-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  &__circle-bg {
+    position: absolute;
+    margin-top: 0.5rem;
+  }
+
+  &__gradient-text {
+    background: linear-gradient(to right, #7c3aed, #a78bfa, #7c3aed);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  &__description {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    padding-left: 5rem;
+  }
+
+  // --- Sección de Mecanografía y Empresa ---
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding-top: 3.75rem;
+    text-align: center;
+
+    @include respond-to('lg') {
+      text-align: left;
+    }
+  }
+
+  &__typing-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  &__cursor {
+    animation: pulse 1s infinite;
+  }
+
+  // &__company-info {
+  //   font-size: 1.125rem;
+  //   color: rgba(255, 255, 255, 0.9);
+  //   letter-spacing: 0.025em;
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   align-items: center;
+  //   justify-content: center;
+  //   gap: 0.5rem;
+
+  //   @include respond-to('lg') {
+  //     font-size: 1.25rem;
+  //     justify-content: flex-start;
+  //   }
+  // }
+
+  &__company-tag {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__company-logo {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  &__company-name {
+    color: var(--blue-accent);
+    font-weight: 600;
+  }
+
+  &__bio {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 42rem;
+    // margin-top: 3.75rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include respond-to('lg') {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  &__highlight {
+    color: var(--purple-accent);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}

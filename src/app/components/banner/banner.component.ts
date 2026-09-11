@@ -5,9 +5,13 @@ import { Component, OnDestroy, OnInit, signal } from '@angular/core';
   templateUrl: './banner.component.html',
 })
 export class BannerComponent implements OnInit, OnDestroy {
-  private readonly texts = ['Software Engineer', 'UI/UX Designer', 'React Native Developer'];
+  private readonly texts = [
+    'Ingeniero de Software',
+    'Desarrollador Fullstack',
+    'Desarrollador Angular',
+  ];
 
-  private isAlive = true;
+  private readonly isAlive = signal(true);
   protected readonly displayedText = signal('');
 
   ngOnInit(): void {
@@ -15,17 +19,17 @@ export class BannerComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.isAlive = false;
+    this.isAlive.set(false);
   }
 
   private async runTypingLoop(): Promise<void> {
     let index = 0;
 
-    while (this.isAlive) {
+    while (this.isAlive()) {
       const currentText = this.texts[index];
 
       // 1. Write the text character by character
-      for (let i = 1; i <= currentText.length && this.isAlive; i++) {
+      for (let i = 1; i <= currentText.length && this.isAlive(); i++) {
         this.displayedText.set(currentText.slice(0, i));
         await this.sleep(100);
       }
@@ -34,7 +38,7 @@ export class BannerComponent implements OnInit, OnDestroy {
       await this.sleep(2000);
 
       // 3. Delete the text character by character
-      for (let i = currentText.length - 1; i >= 0 && this.isAlive; i--) {
+      for (let i = currentText.length - 1; i >= 0 && this.isAlive(); i--) {
         this.displayedText.set(currentText.slice(0, i));
         await this.sleep(50);
       }

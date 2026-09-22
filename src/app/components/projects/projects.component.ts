@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { ExperienceCard } from './experience.model';
+import { ProjectCard } from './projects.model';
 
 @Component({
-  selector: 'app-experience',
-  templateUrl: './experience.component.html',
+  selector: 'app-projects',
+  templateUrl: './projects.component.html',
 })
-export class ExperienceComponent {
-  readonly experienceCards: ExperienceCard[] = [
+export class ProjectsComponent {
+  readonly projectCards: ProjectCard[] = [
     {
       id: 1,
       title: 'Genesis 2.0',

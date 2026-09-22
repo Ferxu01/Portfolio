@@ -1,0 +1,40 @@
+<section id="projects" class="projects-section">
+  <div class="projects-section__container">
+    <h2 class="projects-section__title">Proyectos</h2>
+
+    <div class="projects-section__grid">
+      @for (card of projectCards; track card.id) {
+        <article class="project-card">
+          <div class="project-card__icon-wrapper">
+            <img
+              [src]="card.icon"
+              [alt]="card.title"
+              width="160"
+              height="160"
+              class="project-card__icon"
+            />
+          </div>
+
+          <div class="project-card__content">
+            <h3 class="project-card__title">
+              {{ card.title }}
+            </h3>
+
+            <p class="project-card__description">
+              {{ card.description }}
+            </p>
+
+            <a
+              [href]="card.link"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-card__link"
+            >
+              Ver más &rarr;
+            </a>
+          </div>
+        </article>
+      }
+    </div>
+  </div>
+</section>

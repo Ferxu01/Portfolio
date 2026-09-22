@@ -1,6 +1,6 @@
 @use '../abstracts/mixins' as *;
 
-.experience-section {
+.projects-section {
   padding-top: 5rem;
   padding-bottom: 5rem;
   padding-left: 1.5rem;
@@ -35,7 +35,7 @@
   }
 }
 
-.experience-card {
+.project-card {
   background: linear-gradient(to right, #020617, #3b0764, #020617);
   backdrop-filter: blur(4px);
   border-radius: 0.75rem;

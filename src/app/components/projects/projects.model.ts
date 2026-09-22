@@ -1,4 +1,4 @@
-export interface ExperienceCard {
+export interface ProjectCard {
   id: number;
   title: string;
   description: string;

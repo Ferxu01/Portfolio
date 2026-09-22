@@ -25,7 +25,6 @@
     }
   }
 
-  // --- Sección de Imagen y Burbuja ---
   &__media {
     display: flex;
     justify-content: center;
@@ -126,7 +125,6 @@
   //   }
   // }
 
-  // --- Contenido de Texto ---
   &__content {
     flex: 1;
     display: flex;
@@ -181,7 +179,6 @@
     padding-top: 1rem;
   }
 
-  // --- Sección de Mecanografía y Empresa ---
   &__details {
     display: flex;
     flex-direction: column;
@@ -204,22 +201,6 @@
     animation: pulse 1s infinite;
   }
 
-  // &__company-info {
-  //   font-size: 1.125rem;
-  //   color: rgba(255, 255, 255, 0.9);
-  //   letter-spacing: 0.025em;
-  //   display: flex;
-  //   flex-wrap: wrap;
-  //   align-items: center;
-  //   justify-content: center;
-  //   gap: 0.5rem;
-
-  //   @include respond-to('lg') {
-  //     font-size: 1.25rem;
-  //     justify-content: flex-start;
-  //   }
-  // }
-
   &__company-tag {
     display: flex;
     align-items: center;
@@ -229,11 +210,6 @@
   &__company-logo {
     width: 1.25rem;
     height: 1.25rem;
-  }
-
-  &__company-name {
-    color: var(--blue-accent);
-    font-weight: 600;
   }
 
   &__bio {

@@ -8,7 +8,11 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "prepare": "husky"
+    "lint-staged": "npx lint-staged",
+    "format": "prettier --write \"./src/**/*.{html,ts,scss,json}\"",
+    "prettier:format": "npx prettier . --write",
+    "prepare": "husky",
+    "commitlint": "commitlint --edit"
   },
   "private": true,
   "packageManager": "npm@12.0.2",
@@ -32,6 +36,8 @@
     "@angular/build": "^22.1.7",
     "@angular/cli": "^22.1.7",
     "@angular/compiler-cli": "^22.1.0",
+    "@commitlint/cli": "^21.2.3",
+    "@commitlint/config-conventional": "^21.2.3",
     "@eslint/js": "^10.0.1",
     "angular-eslint": "22.5.0",
     "eslint": "^10.9.1",

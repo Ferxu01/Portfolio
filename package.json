@@ -10,6 +10,7 @@
     "lint": "ng lint",
     "lint-staged": "npx lint-staged",
     "format": "prettier --write \"./src/**/*.{html,ts,scss,json}\"",
+    "format:check": "prettier --check \"./src/**/*.{html,ts,scss,json}\"",
     "prettier:format": "npx prettier . --write",
     "prepare": "husky",
     "commitlint": "commitlint --edit"

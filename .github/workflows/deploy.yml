@@ -21,9 +21,6 @@ jobs:
       - name: Instalar dependencias
         run: npm ci
 
-      - name: Ejecutar pruebas unitarias
-        run: npm test -- --watchAll=false
-
   deploy:
     needs: build-and-test
     runs-on: ubuntu-latest

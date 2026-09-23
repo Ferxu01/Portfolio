@@ -5,6 +5,7 @@ import { BannerComponent } from './components/banner/banner.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { AboutComponent } from './components/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { TechnologiesComponent } from './components/technologies/technologies.component';
 
 @Component({
   imports: [
@@ -13,6 +14,7 @@ import { FooterComponent } from './components/footer/footer.component';
     BannerComponent,
     ProjectsComponent,
     AboutComponent,
+    TechnologiesComponent,
     FooterComponent,
   ],
   selector: 'app-root',

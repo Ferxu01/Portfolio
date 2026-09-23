@@ -1,0 +1,102 @@
+<!-- <section id="technologies" class="tech-section">
+  <div class="tech-section__container">
+    <div class="tech-section__header">
+      <svg
+        class="tech-section__header-icon"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        <path
+          d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.488.488 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 0 0-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96a.48.48 0 0 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"
+        />
+      </svg>
+      <h2 class="tech-section__title">Stack Tecnológico</h2>
+    </div>
+
+    <div class="tech-section__grid">
+      @for (tech of technologies; track tech.id) {
+        <article class="tech-card">
+          <div class="tech-card__icon-wrapper">
+            <img
+              [src]="tech.iconUrl"
+              [alt]="tech.name"
+              class="tech-card__icon"
+              loading="lazy"
+              width="56"
+              height="56"
+            />
+          </div>
+          <span class="tech-card__name">{{ tech.name }}</span>
+        </article>
+      }
+    </div>
+  </div>
+</section> -->
+
+<section id="technologies" class="tech-section">
+  <div class="tech-section__container">
+    <!-- Encabezado Principal -->
+    <div class="tech-section__header">
+      <svg
+        class="tech-section__header-icon"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        <path
+          d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.488.488 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 0 0-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96a.48.48 0 0 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6-3.6z"
+        />
+      </svg>
+      <h2 class="tech-section__title">Tecnologías</h2>
+    </div>
+
+    <!-- MAIN STACK -->
+    <div class="main-stack">
+      <h3 class="main-stack__badge">Stack Principal</h3>
+      <div class="main-stack__grid">
+        @for (tech of mainStack; track tech.id) {
+          <article class="main-stack__card">
+            <div class="main-stack__icon-wrapper">
+              <img
+                [src]="tech.iconUrl"
+                [alt]="tech.name"
+                class="main-stack__icon"
+                loading="lazy"
+                width="64"
+                height="64"
+              />
+            </div>
+            <span class="main-stack__name">{{ tech.name }}</span>
+          </article>
+        }
+      </div>
+    </div>
+
+    <div class="tech-section__categories">
+      @for (category of categories; track category.title) {
+        <div class="tech-group">
+          <h3 class="tech-group__title">{{ category.title }}</h3>
+
+          <div class="tech-group__grid">
+            @for (tech of category.technologies; track tech.id) {
+              <article class="tech-card">
+                <div class="tech-card__icon-wrapper">
+                  <img
+                    [src]="tech.iconUrl"
+                    [alt]="tech.name"
+                    class="tech-card__icon"
+                    loading="lazy"
+                    width="56"
+                    height="56"
+                  />
+                </div>
+                <span class="tech-card__name">{{ tech.name }}</span>
+              </article>
+            }
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

@@ -1,15 +1,16 @@
-import { Component, OnDestroy, OnInit, signal } from '@angular/core';
+import { Component, inject, OnDestroy, OnInit, signal } from '@angular/core';
+import { TranslocoPipe, TranslocoService } from '@jsverse/transloco';
+import { firstValueFrom } from 'rxjs';
 
 @Component({
   selector: 'app-banner',
   templateUrl: './banner.component.html',
+  imports: [TranslocoPipe],
 })
 export class BannerComponent implements OnInit, OnDestroy {
-  private readonly texts = [
-    'Ingeniero de Software',
-    'Desarrollador Fullstack',
-    'Desarrollador Angular',
-  ];
+  private readonly translocoService = inject(TranslocoService);
+
+  private readonly texts = ['SOFTWARE_ENGINEER', 'FULLSTACK_DEVELOPER', 'ANGULAR_DEVELOPER'];
 
   private readonly isAlive = signal(true);
   protected readonly displayedText = signal('');
@@ -25,8 +26,11 @@ export class BannerComponent implements OnInit, OnDestroy {
   private async runTypingLoop(): Promise<void> {
     let index = 0;
 
+    // Ensures that the current translations file is completely loaded before beginning the loop
+    await firstValueFrom(this.translocoService.selectTranslation());
+
     while (this.isAlive()) {
-      const currentText = this.texts[index];
+      const currentText = this.translocoService.translate(this.texts[index]);
 
       // 1. Write the text character by character
       for (let i = 1; i <= currentText.length && this.isAlive(); i++) {

@@ -2,12 +2,10 @@
   <div class="footer__container">
     <!-- Encabezado de Contacto -->
     <div class="footer__content">
-      <h2 class="footer__title">Contacto</h2>
+      <h2 class="footer__title">{{ 'CONTACT' | transloco }}</h2>
 
       <p class="footer__description">
-        ¿Tienes una idea en mente o buscas un perfil que conecte desarrollo y diseño? Estoy
-        disponible para colaborar en proyectos desafiantes o sumarme a un equipo donde pueda crear
-        experiencias digitales de alto impacto.
+        {{ 'FOOTER_DESCRIPTION' | transloco }}
       </p>
 
       @if (displayedEmail()) {
@@ -26,8 +24,8 @@
         </a>
       } @else {
         <button
-          type="button"
           class="footer__email-btn"
+          type="button"
           (click)="revealEmail()"
           (focus)="revealEmail()"
         >
@@ -41,7 +39,7 @@
               d="M1.5 4.5a3 3 0 0 1 3-3h15a3 3 0 0 1 3 3v15a3 3 0 0 1-3 3h-15a3 3 0 0 1-3-3v-15Zm3-1.5a1.5 1.5 0 0 0-1.5 1.5v.724l9 5.4 9-5.4V4.5a1.5 1.5 0 0 0-1.5-1.5h-15Zm16.5 4.226-8.583 5.15a.75.75 0 0 1-.834 0L3 7.226V19.5a1.5 1.5 0 0 0 1.5 1.5h15a1.5 1.5 0 0 0 1.5-1.5V7.226Z"
             />
           </svg>
-          <span>Mostrar correo electrónico</span>
+          <span>{{ 'SHOW_EMAIL' | transloco }}</span>
         </button>
       }
     </div>
@@ -50,10 +48,10 @@
     <div class="footer__socials">
       @for (social of socialLinks; track social.name) {
         <a
+          class="footer__social-link"
           [href]="social.link"
           target="_blank"
           rel="noopener noreferrer"
-          class="footer__social-link"
           [attr.aria-label]="social.name"
           [title]="social.name"
         >
@@ -71,7 +69,8 @@
     <!-- Copyright -->
     <div class="footer__copyright">
       <p class="footer__copyright-text">
-        &copy; {{ currentYear }} Fernando Ortega. Todos los derechos reservados.
+        &copy; {{ currentYear }} {{ 'FULL_NAME' | transloco }}.
+        {{ 'ALL_RIGHTS_RESERVED' | transloco }}
       </p>
     </div>
   </div>

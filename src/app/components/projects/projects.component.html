@@ -1,36 +1,36 @@
 <section id="projects" class="projects-section">
   <div class="projects-section__container">
-    <h2 class="projects-section__title">Proyectos</h2>
+    <h2 class="projects-section__title">{{ 'PROJECTS' | transloco }}</h2>
 
     <div class="projects-section__grid">
       @for (card of projectCards; track card.id) {
         <article class="project-card">
           <div class="project-card__icon-wrapper">
             <img
+              class="project-card__icon"
               [src]="card.icon"
-              [alt]="card.title"
+              [alt]="card.title | transloco"
               width="160"
               height="160"
-              class="project-card__icon"
             />
           </div>
 
           <div class="project-card__content">
             <h3 class="project-card__title">
-              {{ card.title }}
+              {{ card.title | transloco }}
             </h3>
 
             <p class="project-card__description">
-              {{ card.description }}
+              {{ card.description | transloco }}
             </p>
 
             <a
+              class="project-card__link"
               [href]="card.link"
               target="_blank"
               rel="noopener noreferrer"
-              class="project-card__link"
             >
-              Ver más &rarr;
+              {{ 'LEARN_MORE' | transloco }} &rarr;
             </a>
           </div>
         </article>

@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { Technology, TechnologyCategory } from './technologies.model';
+import { TranslocoPipe } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-technologies',
   templateUrl: './technologies.component.html',
+  imports: [TranslocoPipe],
 })
 export class TechnologiesComponent {
   protected readonly mainStack: Technology[] = [
@@ -18,14 +20,14 @@ export class TechnologiesComponent {
 
   protected readonly categories: TechnologyCategory[] = [
     {
-      title: 'Frontend',
+      title: 'FRONTEND',
       technologies: [
         { id: 'ionic', name: 'Ionic', iconUrl: 'assets/technologies/ionic.svg' },
         { id: 'electron', name: 'Electron', iconUrl: 'assets/technologies/electron.svg' },
       ],
     },
     {
-      title: 'Backend',
+      title: 'BACKEND',
       technologies: [
         { id: 'csharp', name: 'C#', iconUrl: 'assets/technologies/csharp.svg' },
         { id: 'dot-net', name: '.NET', iconUrl: 'assets/technologies/dot-net.svg' },
@@ -34,7 +36,7 @@ export class TechnologiesComponent {
       ],
     },
     {
-      title: 'Bases de Datos / Cloud / DevOps',
+      title: 'DEVOPS_CLOUD',
       technologies: [
         { id: 'github', name: 'Git / GitHub', iconUrl: 'assets/technologies/github.svg' },
         { id: 'docker', name: 'Docker', iconUrl: 'assets/technologies/docker.svg' },
@@ -43,7 +45,7 @@ export class TechnologiesComponent {
       ],
     },
     {
-      title: 'Testing, QA / IA',
+      title: 'QA_AI',
       technologies: [
         { id: 'cypress', name: 'Cypress', iconUrl: 'assets/technologies/cypress.svg' },
         { id: 'jest', name: 'Jest', iconUrl: 'assets/technologies/jest.svg' },

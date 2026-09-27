@@ -1,4 +1,5 @@
 import { Component, computed, signal } from '@angular/core';
+import { TranslocoPipe } from '@jsverse/transloco';
 
 interface SocialLink {
   name: 'Instagram' | 'GitHub' | 'LinkedIn';
@@ -9,6 +10,7 @@ interface SocialLink {
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
+  imports: [TranslocoPipe],
 })
 export class FooterComponent {
   /**

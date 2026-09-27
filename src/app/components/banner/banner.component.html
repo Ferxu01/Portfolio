@@ -7,33 +7,34 @@
           <!-- Tooltip Móvil -->
           <div class="hero-banner__tooltip hero-banner__tooltip--mobile">
             <img
+              class="hero-banner__arrow hero-banner__arrow--mobile"
               src="assets/arrow.png"
-              alt="Arrow pointer"
+              [alt]="'HERO_ARROW_ALT' | transloco"
               width="80"
               height="80"
-              class="hero-banner__arrow hero-banner__arrow--mobile"
             />
             <div class="hero-banner__greeting-box">
               <p class="hero-banner__greeting-text">
-                Hola! Soy <span class="hero-banner__highlight">Fernando Ortega</span>
+                {{ 'HERO_GREETING' | transloco }}
+                <span class="hero-banner__highlight">{{ 'FULL_NAME' | transloco }}</span>
               </p>
             </div>
             <div class="hero-banner__arrow-pointer hero-banner__arrow-pointer--centered"></div>
           </div>
 
           <img
+            class="hero-banner__image hero-banner__image--absolute"
             src="assets/profile/me.jpg"
-            alt="Fernando Ortega - Software Engineer"
+            [alt]="'HERO_PROFILE_ALT' | transloco"
             width="300"
             height="300"
-            class="hero-banner__image hero-banner__image--absolute"
           />
           <img
+            class="hero-banner__image"
             src="assets/profile/me-glow.png"
-            alt="Fernando Ortega - Software Engineer"
+            [alt]="'HERO_PROFILE_ALT' | transloco"
             width="300"
             height="300"
-            class="hero-banner__image"
           />
         </div>
       </div>
@@ -43,32 +44,35 @@
         <!-- Tooltip Desktop -->
         <div class="hero-banner__tooltip hero-banner__tooltip--desktop">
           <img
+            class="hero-banner__arrow hero-banner__arrow--desktop"
             src="assets/arrow.png"
-            alt="Arrow pointer"
+            [alt]="'HERO_ARROW_ALT' | transloco"
             width="100"
             height="100"
-            class="hero-banner__arrow hero-banner__arrow--desktop"
           />
           <div class="hero-banner__greeting-box hero-banner__greeting-box--desktop">
             <p class="hero-banner__greeting-text">
-              Hola! Soy <span class="hero-banner__highlight">Fernando Ortega</span>
+              {{ 'HERO_GREETING' | transloco }}
+              <span class="hero-banner__highlight">{{ 'FULL_NAME' | transloco }}</span>
             </p>
           </div>
         </div>
 
         <div>
-          <p class="hero-banner__subtitle">Un Desarrollador que</p>
+          <p class="hero-banner__subtitle">{{ 'HERO_SUBTITLE' | transloco }}</p>
           <h1 class="hero-banner__title">
-            Juzga una web
+            {{ 'HERO_TITLE_LINE_1' | transloco }}
             <br />
-            por su
+            {{ 'HERO_TITLE_LINE_2' | transloco }}
             <span class="hero-banner__highlight-wrapper">
-              <span class="hero-banner__gradient-text">código fuente</span>
+              <span class="hero-banner__gradient-text">
+                {{ 'HERO_TITLE_HIGHLIGHT' | transloco }}
+              </span>
             </span>
             ...
           </h1>
           <p class="hero-banner__description">
-            Porque si no es rápida y escalable, la belleza es solo una ilusión.
+            {{ 'HERO_DESCRIPTION' | transloco }}
           </p>
         </div>
       </div>
@@ -77,14 +81,12 @@
     <!-- BIOGRAPHY SECTION -->
     <div class="hero-banner__details">
       <p class="hero-banner__typing-title">
-        Soy {{ displayedText() }}
+        {{ 'I_AM' | transloco }} {{ displayedText() }}
         <span class="hero-banner__cursor">|</span>
       </p>
 
       <p class="hero-banner__bio">
-        Ingeniero de software con más de 3 años de experiencia en el desarrollo web. Creo productos
-        digitales eficientes, escalables y visualmente atractivos, logrando el equilibrio perfecto
-        entre una arquitectura técnica sólida, la experiencia de usuario y los objetivos de negocio.
+        {{ 'HERO_BIO' | transloco }}
       </p>
     </div>
   </div>

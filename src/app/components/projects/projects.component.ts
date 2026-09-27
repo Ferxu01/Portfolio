@@ -1,33 +1,32 @@
 import { Component } from '@angular/core';
 import { ProjectCard } from './projects.model';
+import { TranslocoPipe } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
+  imports: [TranslocoPipe],
 })
 export class ProjectsComponent {
   readonly projectCards: ProjectCard[] = [
     {
       id: 1,
-      title: 'Genesis 2.0',
-      description:
-        'Genesis 2.0 es una herramienta web para la simulación de entornos Smart University mediante la generación de datos sintéticos para sensores IoT. Permite crear patrones temporales complejos y exportar datasets realistas para su integración en aplicaciones de analítica externa.',
+      title: 'PROJECT_GENESIS_TITLE',
+      description: 'PROJECT_GENESIS_DESCRIPTION',
       icon: 'assets/projects/genesis.png',
       link: '',
     },
     {
       id: 2,
-      title: 'Visionary',
-      description:
-        'Visionary es una plataforma educativa e interactiva que combina un modelo 3D del ojo humano con un chatbot con IA para el estudio de su anatomía, fisiología y patologías. Incluye cuestionarios adaptativos y analíticas en tiempo real para que los profesores evalúen el progreso de los estudiantes.',
+      title: 'PROJECT_VISIONARY_TITLE',
+      description: 'PROJECT_VISIONARY_DESCRIPTION',
       icon: 'assets/projects/visionary.png',
       link: '',
     },
     {
       id: 3,
-      title: 'Ferplay App',
-      description:
-        'Ferplay es una aplicación móvil diseñada para conectar a gamers a través de la compraventa de videojuegos. Una plataforma intuitiva y ágil que permite a los usuarios publicar sus títulos, descubrir nuevas experiencias de juego y darle una segunda vida a su colección.',
+      title: 'PROJECT_FERPLAY_TITLE',
+      description: 'PROJECT_FERPLAY_DESCRIPTION',
       icon: 'assets/projects/ferplay.png',
       link: '',
     },

@@ -1,0 +1,60 @@
+<div class="lang-selector">
+  <button
+    type="button"
+    class="lang-selector__button"
+    [class.lang-selector__button--open]="isOpen()"
+    (click)="toggleDropdown()"
+    aria-haspopup="listbox"
+    [attr.aria-expanded]="isOpen()"
+  >
+    <img
+      [src]="`assets/flags/${currentLang()}.svg`"
+      [alt]="currentLang()"
+      class="lang-selector__flag"
+      width="20"
+      height="15"
+    />
+    <span class="lang-selector__label">{{ currentLang() | uppercase }}</span>
+
+    <svg
+      class="lang-selector__arrow"
+      [class.lang-selector__arrow--rotated]="isOpen()"
+      width="12"
+      height="12"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>
+  </button>
+
+  <!-- Menú Desplegable -->
+  @if (isOpen()) {
+    <ul class="lang-selector__dropdown" role="listbox" tabindex="-1">
+      @for (lang of languages; track lang.id) {
+        <li
+          class="lang-selector__item"
+          [class.lang-selector__item--selected]="lang.id === currentLang()"
+          (click)="selectLanguage(lang.id)"
+          (keydown.enter)="selectLanguage(lang.id)"
+          role="option"
+          tabindex="0"
+          [attr.aria-selected]="lang.id === currentLang()"
+        >
+          <img
+            class="lang-selector__flag"
+            [src]="`assets/flags/${lang.id}.svg`"
+            [alt]="lang.id"
+            width="20"
+            height="15"
+          />
+          <span class="lang-selector__item-text">{{ lang.label | transloco }}</span>
+        </li>
+      }
+    </ul>
+  }
+</div>

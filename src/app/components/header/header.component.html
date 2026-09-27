@@ -8,19 +8,14 @@
 
       <!-- Nav links -->
       <ul class="header__menu">
-        <li class="header__item">
-          <a href="#home" class="header__link"> Inicio </a>
-        </li>
-        <li class="header__item">
-          <a href="#about" class="header__link"> Sobre mí </a>
-        </li>
-        <li class="header__item">
-          <a href="#projects" class="header__link"> Proyectos </a>
-        </li>
-        <li class="header__item">
-          <a href="#contact" class="header__link"> Contacto </a>
-        </li>
+        @for (link of links; track link.id) {
+          <li class="header__item">
+            <a [href]="'#' + link.id" class="header__link"> {{ link.label | transloco }} </a>
+          </li>
+        }
       </ul>
+
+      <app-lang-selector />
     </div>
   </nav>
 </header>

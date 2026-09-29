@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslocoPipe } from '@jsverse/transloco';
 import { LangSelectorComponent } from '../lang-selector/lang-selector.component';
@@ -19,6 +19,8 @@ interface NavLink {
   imports: [RouterLink, TranslocoPipe, LangSelectorComponent, ThemeToggleComponent],
 })
 export class HeaderComponent {
+  protected readonly showScrollTop = signal(false);
+
   protected readonly links: NavLink[] = [
     { id: 'home', label: 'HOME' },
     { id: 'about', label: 'ABOUT_ME' },
@@ -26,4 +28,17 @@ export class HeaderComponent {
     { id: 'technologies', label: 'TECHNOLOGIES' },
     { id: 'contact', label: 'CONTACT' },
   ];
+
+  @HostListener('window:scroll')
+  protected onWindowScroll(): void {
+    const yOffset = window.pageYOffset || document.documentElement.scrollTop;
+    this.showScrollTop.set(yOffset > 300);
+  }
+
+  protected scrollToTop(): void {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }
 }

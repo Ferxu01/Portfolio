@@ -39,5 +39,6 @@
   "SHOW_EMAIL": "Mostrar correo electrónico",
   "ALL_RIGHTS_RESERVED": "Todos los derechos reservados.",
   "LIGHT_THEME": "Modo claro",
-  "DARK_THEME": "Modo oscuro"
+  "DARK_THEME": "Modo oscuro",
+  "SCROLL_TO_TOP": "Volver al principio"
 }

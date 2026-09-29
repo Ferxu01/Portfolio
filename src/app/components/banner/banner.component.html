@@ -1,25 +1,16 @@
 <section id="home" class="hero-banner">
   <div class="hero-banner__container">
     <div class="hero-banner__grid">
-      <!-- LADO DERECHO: Imágenes y Burbuja Móvil -->
       <div class="hero-banner__media">
         <div class="hero-banner__avatar-wrapper">
           <!-- Tooltip Móvil -->
           <div class="hero-banner__tooltip hero-banner__tooltip--mobile">
-            <img
-              class="hero-banner__arrow hero-banner__arrow--mobile"
-              src="assets/arrow.png"
-              [alt]="'HERO_ARROW_ALT' | transloco"
-              width="80"
-              height="80"
-            />
             <div class="hero-banner__greeting-box">
               <p class="hero-banner__greeting-text">
                 {{ 'HERO_GREETING' | transloco }}
                 <span class="hero-banner__highlight">{{ 'FULL_NAME' | transloco }}</span>
               </p>
             </div>
-            <div class="hero-banner__arrow-pointer hero-banner__arrow-pointer--centered"></div>
           </div>
 
           <img
@@ -39,17 +30,9 @@
         </div>
       </div>
 
-      <!-- LADO IZQUIERDO: Texto principal -->
       <div class="hero-banner__content">
         <!-- Tooltip Desktop -->
         <div class="hero-banner__tooltip hero-banner__tooltip--desktop">
-          <img
-            class="hero-banner__arrow hero-banner__arrow--desktop"
-            src="assets/arrow.png"
-            [alt]="'HERO_ARROW_ALT' | transloco"
-            width="100"
-            height="100"
-          />
           <div class="hero-banner__greeting-box hero-banner__greeting-box--desktop">
             <p class="hero-banner__greeting-text">
               {{ 'HERO_GREETING' | transloco }}

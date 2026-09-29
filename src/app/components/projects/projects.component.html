@@ -4,10 +4,10 @@
 
     <div class="projects-section__grid">
       @for (card of projectCards; track card.id) {
-        <article class="project-card">
-          <div class="project-card__icon-wrapper">
+        <article class="projects-section__card">
+          <div class="projects-section__card-icon-wrapper">
             <img
-              class="project-card__icon"
+              class="projects-section__card-icon"
               [src]="card.icon"
               [alt]="card.title | transloco"
               width="160"
@@ -15,17 +15,17 @@
             />
           </div>
 
-          <div class="project-card__content">
-            <h3 class="project-card__title">
+          <div class="projects-section__card-content">
+            <h3 class="projects-section__card-title">
               {{ card.title | transloco }}
             </h3>
 
-            <p class="project-card__description">
+            <p class="projects-section__card-description">
               {{ card.description | transloco }}
             </p>
 
             <a
-              class="project-card__link"
+              class="projects-section__card-link"
               [href]="card.link"
               target="_blank"
               rel="noopener noreferrer"

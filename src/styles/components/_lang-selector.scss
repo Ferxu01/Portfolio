@@ -30,9 +30,9 @@ $transition-normal: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     align-items: center;
     gap: 0.5rem;
     padding: 0.4rem 0.75rem;
-    background-color: var(--bg-secondary, rgba(255, 255, 255, 0.05));
+    background-color: var(--btn-bg);
     color: inherit;
-    border: 1px solid var(--border-color, rgba(255, 255, 255, 0.15));
+    border: 1px solid var(--btn-border);
     border-radius: 8px;
     font-size: 0.875rem;
     font-weight: 600;
@@ -41,13 +41,13 @@ $transition-normal: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     transition: all $transition-normal;
 
     &:hover {
-      background-color: var(--bg-hover, rgba(255, 255, 255, 0.1));
-      border-color: var(--border-hover, rgba(255, 255, 255, 0.3));
+      background-color: var(--btn-bg-hover);
+      border-color: var(--btn-border-hover);
     }
 
     &--open {
-      border-color: var(--primary-color, #3b82f6);
-      box-shadow: 0 0 0 3px var(--primary-focus, rgba(59, 130, 246, 0.2));
+      border-color: var(--purple-accent, #3b82f6);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
     }
   }
 

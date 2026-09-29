@@ -19,7 +19,7 @@
     &-icon {
       width: 2rem;
       height: 2rem;
-      color: #ffffff;
+      color: var(--purple-accent);
 
       @include respond-to('lg') {
         width: 2.5rem;
@@ -31,7 +31,7 @@
   &__title {
     font-size: 2rem;
     font-weight: 700;
-    color: var(--text-primary, #ffffff);
+    color: var(--text-primary);
     margin: 0;
 
     @include respond-to('lg') {
@@ -50,25 +50,26 @@
   position: relative;
   margin-bottom: 4rem;
   padding: 2.5rem 1.5rem 2rem 1.5rem;
-  background: linear-gradient(135deg, rgba(59, 7, 100, 0.35), rgba(2, 6, 23, 0.8));
-  border: 1px solid rgba(168, 85, 247, 0.4);
+  background: var(--btn-bg);
+  border: 1px solid var(--purple-accent);
   border-radius: 1.25rem;
-  box-shadow: 0 0 30px rgba(168, 85, 247, 0.15);
+  box-shadow: 0 10px 30px -10px var(--purple-accent-glow, rgba(126, 34, 206, 0.2));
+  backdrop-filter: blur(12px);
 
   &__badge {
     position: absolute;
     top: -1rem;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #7e22ce;
-    color: #ffffff;
+    background-color: var(--purple-accent);
+    color: var(--bg-primary, #ffffff);
     font-size: 0.85rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     padding: 0.35rem 1.25rem;
     border-radius: 2rem;
-    box-shadow: 0 4px 12px rgba(126, 34, 206, 0.4);
+    box-shadow: 0 4px 12px var(--purple-accent-glow, rgba(126, 34, 206, 0.3));
   }
 
   &__grid {
@@ -87,8 +88,8 @@
     align-items: center;
     justify-content: center;
     padding: 1.75rem 1rem;
-    background-color: rgba(15, 23, 42, 0.8);
-    border: 1px solid rgba(192, 132, 252, 0.3);
+    background-color: var(--btn-bg-hover);
+    border: 1px solid var(--border-subtle);
     border-radius: 1rem;
   }
 
@@ -110,7 +111,7 @@
   &__name {
     font-size: 1.1rem;
     font-weight: 700;
-    color: #ffffff;
+    color: var(--text-primary);
     text-align: center;
   }
 }
@@ -119,7 +120,7 @@
   &__title {
     font-size: 1.15rem;
     font-weight: 600;
-    color: var(--purple-accent, #c084fc);
+    color: var(--purple-accent);
     margin-bottom: 1.25rem;
     display: flex;
     align-items: center;
@@ -129,7 +130,7 @@
       content: '';
       flex: 1;
       height: 1px;
-      background: rgba(255, 255, 255, 0.1);
+      background: var(--border-subtle);
       margin-left: 0.5rem;
     }
   }
@@ -155,8 +156,8 @@
   align-items: center;
   justify-content: center;
   padding: 1.25rem 0.75rem;
-  background-color: rgba(15, 23, 42, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: var(--btn-bg);
+  border: 1px solid var(--border-subtle);
   border-radius: 0.85rem;
   backdrop-filter: blur(8px);
 
@@ -178,7 +179,7 @@
   &__name {
     font-size: 0.875rem;
     font-weight: 500;
-    color: var(--text-primary, #ffffff);
+    color: var(--text-primary);
     text-align: center;
   }
 }

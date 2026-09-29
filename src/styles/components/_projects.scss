@@ -1,10 +1,7 @@
 @use '../abstracts/mixins' as *;
 
 .projects-section {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding: 5rem 1.5rem;
 
   &__container {
     width: 100%;
@@ -25,7 +22,7 @@
   }
 
   &__grid {
-    display: grid !important;
+    display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
 
@@ -33,64 +30,57 @@
       grid-template-columns: repeat(2, 1fr);
     }
   }
-}
 
-.project-card {
-  background: linear-gradient(to right, #020617, #3b0764, #020617);
-  backdrop-filter: blur(4px);
-  border-radius: 0.75rem;
-  padding: 1.5rem;
-  border-top: 3px solid #7e22ce;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  transition:
-    box-shadow 0.3s ease,
-    transform 0.3s ease;
+  &__card {
+    background-color: var(--btn-bg);
+    backdrop-filter: blur(8px);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    border: 1px solid var(--border-subtle);
+    border-top: 3px solid var(--purple-accent);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 
-  &:hover {
-    box-shadow: 0 25px 50px -12px rgba(88, 28, 135, 0.5);
-  }
+    &-icon-wrapper {
+      margin-bottom: 1rem;
+      flex-shrink: 0;
+    }
 
-  &__icon-wrapper {
-    margin-bottom: 1rem;
-    flex-shrink: 0;
-  }
+    &-icon {
+      object-fit: contain;
+      width: auto;
+      height: auto;
+    }
 
-  &__icon {
-    object-fit: contain;
-    width: auto;
-    height: auto;
-  }
+    &-content {
+      flex: 1;
+    }
 
-  &__content {
-    flex: 1;
-  }
+    &-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
 
-  &__title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    margin-bottom: 0.5rem;
-  }
+    &-description {
+      color: var(--text-secondary);
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+      line-height: 1.4;
+    }
 
-  &__description {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.875rem;
-    margin-bottom: 1rem;
-    line-height: 1.4;
-  }
+    &-link {
+      color: var(--purple-accent);
+      font-weight: 500;
+      font-size: 0.875rem;
+      text-decoration: none;
+      display: inline-block;
 
-  &__link {
-    color: var(--purple-accent, #c084fc);
-    font-weight: 500;
-    font-size: 0.875rem;
-    text-decoration: none;
-    display: inline-block;
-    transition: color 0.2s ease;
-
-    &:hover {
-      color: #d8b4fe;
+      &:hover {
+        color: var(--purple-accent-hover, var(--purple-accent));
+      }
     }
   }
 }

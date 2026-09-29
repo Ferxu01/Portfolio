@@ -1,13 +1,34 @@
 // ==========================================
 // COLOR PALETTE
 // ==========================================
-$color-bg-primary: #110720;
-$color-text-primary: #ffffff;
 
-// HEADER COLORS
-$color-bg-header: rgba(17, 7, 32, 0.8);
-$color-border-subtle: rgba(255, 255, 255, 0.1);
-$color-purple-accent: #c084fc;
+// Dark Theme
+$color-bg-primary-dark: #110720;
+$color-text-primary-dark: #ffffff;
+$color-text-secondary-dark: rgba(255, 255, 255, 0.7);
+$color-bg-header-dark: rgba(17, 7, 32, 0.8);
+$color-border-subtle-dark: rgba(255, 255, 255, 0.1);
+$color-purple-accent-dark: #c084fc;
+
+// Variables nuevas para inputs/botones interactivos (Dark)
+$color-border-button-dark: rgba(255, 255, 255, 0.15);
+$color-border-button-hover-dark: rgba(255, 255, 255, 0.3);
+$color-bg-button-dark: rgba(255, 255, 255, 0.05);
+$color-bg-button-hover-dark: rgba(255, 255, 255, 0.1);
+
+// Light Theme
+$color-bg-primary-light: #f8fafc;
+$color-text-primary-light: #0f172a;
+$color-text-secondary-light: #475569;
+$color-bg-header-light: rgba(248, 250, 252, 0.85);
+$color-border-subtle-light: rgba(15, 23, 42, 0.12);
+$color-purple-accent-light: #7e22ce;
+
+// Variables nuevas para inputs/botones interactivos (Light)
+$color-border-button-light: rgba(15, 23, 42, 0.2);
+$color-border-button-hover-light: rgba(15, 23, 42, 0.4);
+$color-bg-button-light: rgba(15, 23, 42, 0.04);
+$color-bg-button-hover-light: rgba(15, 23, 42, 0.08);
 
 // SYSTEM BREAKPOINTS
 $breakpoints: (
@@ -16,14 +37,3 @@ $breakpoints: (
   'lg': 1024px,
   'xl': 1280px,
 );
-
-:root {
-  --bg-primary: #{$color-bg-primary};
-  --text-primary: #{$color-text-primary};
-
-  --bg-header: #{$color-bg-header};
-  --border-subtle: #{$color-border-subtle};
-  --purple-accent: #{$color-purple-accent};
-
-  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-}

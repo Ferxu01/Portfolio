@@ -12,3 +12,34 @@
     @warn "El breakpoint '#{$breakpoint}' no existe dentro del mapa $breakpoints.";
   }
 }
+
+@mixin apply-light-theme {
+  --bg-primary: #{$color-bg-primary-light};
+  --text-primary: #{$color-text-primary-light};
+  --text-secondary: #{$color-text-secondary-light};
+  --purple-accent: #{$color-purple-accent-light};
+  // TODO: REVISAR DE ADAPTAR A MISMO COLOR QUE '--bg-primary'
+  --bg-header: #{$color-bg-header-light};
+  --border-subtle: #{$color-border-subtle-light};
+
+  // Controls and buttons
+  --btn-border: #{$color-border-button-light};
+  --btn-border-hover: #{$color-border-button-hover-light};
+  --btn-bg: #{$color-bg-button-light};
+  --btn-bg-hover: #{$color-bg-button-hover-light};
+}
+
+@mixin apply-dark-theme {
+  --bg-primary: #{$color-bg-primary-dark};
+  --text-primary: #{$color-text-primary-dark};
+  --text-secondary: #{$color-text-secondary-dark};
+  --purple-accent: #{$color-purple-accent-dark};
+  --bg-header: #{$color-bg-header-dark};
+  --border-subtle: #{$color-border-subtle-dark};
+
+  // Controls and buttons
+  --btn-border: #{$color-border-button-dark};
+  --btn-border-hover: #{$color-border-button-hover-dark};
+  --btn-bg: #{$color-bg-button-dark};
+  --btn-bg-hover: #{$color-bg-button-hover-dark};
+}

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslocoPipe } from '@jsverse/transloco';
 import { LangSelectorComponent } from '../lang-selector/lang-selector.component';
+import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
 
 // eslint-disable-next-line unused-imports/no-unused-vars
 const links = ['home', 'about', 'projects', 'technologies', 'contact'] as const;
@@ -15,7 +16,7 @@ interface NavLink {
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  imports: [RouterLink, TranslocoPipe, LangSelectorComponent],
+  imports: [RouterLink, TranslocoPipe, LangSelectorComponent, ThemeToggleComponent],
 })
 export class HeaderComponent {
   protected readonly links: NavLink[] = [

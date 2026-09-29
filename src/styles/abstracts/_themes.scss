@@ -1,0 +1,27 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// Light Theme (Default values)
+:root {
+  color-scheme: light dark;
+
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  @include apply-light-theme;
+}
+
+// 2. Detección automática del Sistema Operativo en modo oscuro
+// @media (prefers-color-scheme: dark) {
+//   :root:not([data-theme='light']) {
+//     @include apply-dark-theme;
+//   }
+// }
+
+// 3. Forzado Manual mediante atributo data-theme
+[data-theme='dark'] {
+  @include apply-dark-theme;
+}
+
+[data-theme='light'] {
+  @include apply-light-theme;
+}

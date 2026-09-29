@@ -37,5 +37,7 @@
   "QA_AI": "Testing, QA / IA",
   "FOOTER_DESCRIPTION": "¿Tienes una idea en mente o buscas un perfil que conecte desarrollo y diseño? Estoy disponible para colaborar en proyectos desafiantes o sumarme a un equipo donde pueda crear experiencias digitales de alto impacto.",
   "SHOW_EMAIL": "Mostrar correo electrónico",
-  "ALL_RIGHTS_RESERVED": "Todos los derechos reservados."
+  "ALL_RIGHTS_RESERVED": "Todos los derechos reservados.",
+  "LIGHT_THEME": "Modo claro",
+  "DARK_THEME": "Modo oscuro"
 }

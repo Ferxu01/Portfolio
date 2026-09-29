@@ -2,6 +2,7 @@
 // @use 'styles/abstracts/variables';
 @use 'styles/abstracts/variables' as *;
 @use 'styles/abstracts/mixins';
+@use 'styles/abstracts/themes';
 
 // 2. Base
 @use 'styles/base/reset';
@@ -16,3 +17,4 @@
 @use 'styles/components/footer';
 
 @use 'styles/components/lang-selector';
+@use 'styles/components/theme-toggle';

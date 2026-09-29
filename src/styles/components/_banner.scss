@@ -37,22 +37,17 @@
     }
   }
 
-  &__avatar-wrapper {
-    position: relative;
-    top: 2.5rem;
-  }
+  // TODO: Is this class already necessary? Position is 'relative' by default
+  // &__avatar-wrapper {
+  //   position: relative;
+  // }
 
   &__image {
-    width: auto;
+    width: 100%;
     height: auto;
     max-width: 28rem;
     border-radius: 15%;
-
-    &--absolute {
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
+    display: block;
   }
 
   &__tooltip {

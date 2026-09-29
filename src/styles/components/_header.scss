@@ -39,6 +39,11 @@
     width: auto;
     height: auto;
     display: block;
+    transition: filter 0.3s ease;
+
+    [data-theme='dark'] & {
+      filter: invert(1);
+    }
   }
 
   &__menu {

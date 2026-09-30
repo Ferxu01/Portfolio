@@ -40,5 +40,6 @@
   "ALL_RIGHTS_RESERVED": "Todos los derechos reservados.",
   "LIGHT_THEME": "Modo claro",
   "DARK_THEME": "Modo oscuro",
-  "SCROLL_TO_TOP": "Volver al principio"
+  "SCROLL_TO_TOP": "Volver al principio",
+  "TOGGLE_MENU": "Menú lateral"
 }

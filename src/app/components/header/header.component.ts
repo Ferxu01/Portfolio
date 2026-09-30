@@ -20,6 +20,7 @@ interface NavLink {
 })
 export class HeaderComponent {
   protected readonly showScrollTop = signal(false);
+  protected readonly isMenuOpen = signal(false);
 
   protected readonly links: NavLink[] = [
     { id: 'home', label: 'HOME' },
@@ -40,5 +41,13 @@ export class HeaderComponent {
       top: 0,
       behavior: 'smooth',
     });
+  }
+
+  protected toggleMenu(): void {
+    this.isMenuOpen.update((prev) => !prev);
+  }
+
+  protected closeMenu(): void {
+    this.isMenuOpen.set(false);
   }
 }

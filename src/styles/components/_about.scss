@@ -1,7 +1,12 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 .about-section {
-  padding: 5rem 1.5rem;
+  padding: 3rem 1rem;
+
+  @include respond-to('md') {
+    padding: 5rem 1.5rem;
+  }
 
   &__container {
     width: 100%;
@@ -14,22 +19,38 @@
   }
 
   &__text {
-    font-size: 1.5rem;
+    font-size: 1.125rem;
+    line-height: 1.5;
     max-width: 72rem;
     margin-left: auto;
     margin-right: auto;
     color: var(--text-primary);
-    line-height: 1.6;
+
+    @include respond-to('sm') {
+      font-size: 1.25rem;
+    }
+
+    @include respond-to('md') {
+      font-size: 1.5rem;
+      line-height: 1.6;
+    }
   }
 
   &__highlight {
     color: var(--purple-accent);
+    font-weight: 600;
   }
 
   &__subtext {
     font-size: 0.875rem;
-    display: inline-block;
-    margin-top: 0.25rem;
+    display: block;
+    margin-top: 0.75rem;
     color: var(--text-secondary);
+    line-height: 1.5;
+
+    @include respond-to('md') {
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
   }
 }

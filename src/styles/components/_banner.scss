@@ -19,9 +19,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 2rem;
 
     @include respond-to('lg') {
       flex-direction: row;
+      gap: 0;
     }
   }
 
@@ -37,54 +39,16 @@
     }
   }
 
-  // TODO: Is this class already necessary? Position is 'relative' by default
-  // &__avatar-wrapper {
-  //   position: relative;
-  // }
-
   &__image {
     width: 100%;
     height: auto;
-    max-width: 28rem;
+    max-width: 24rem; // This size is put to avoid huge image on small screen sizes, previous was 28rem
     border-radius: 15%;
     display: block;
-  }
 
-  &__tooltip {
-    position: relative;
-    display: inline-block;
-
-    &--mobile {
-      z-index: 10;
-      margin-bottom: 2rem;
-
-      @include respond-to('lg') {
-        display: none;
-      }
+    @include respond-to('lg') {
+      max-width: 28rem;
     }
-
-    &--desktop {
-      display: none;
-
-      @include respond-to('lg') {
-        display: inline-block;
-      }
-    }
-  }
-
-  &__greeting-box {
-    position: relative;
-    padding-left: 5rem;
-
-    &--desktop {
-      bottom: 40px;
-    }
-  }
-
-  &__greeting-text {
-    color: var(--text-primary);
-    font-size: 1.125rem;
-    white-space: nowrap;
   }
 
   &__content {
@@ -93,38 +57,60 @@
     flex-direction: column;
     gap: 1.5rem;
     text-align: center;
+    width: 100%;
 
     @include respond-to('lg') {
       text-align: left;
     }
   }
 
+  &__tooltip {
+    position: relative;
+    display: inline-block;
+  }
+
+  &__greeting-box {
+    position: relative;
+    padding-left: 0;
+
+    @include respond-to('lg') {
+      padding-left: 5rem;
+      bottom: 10px;
+    }
+  }
+
+  &__greeting-text {
+    color: var(--text-primary);
+    font-size: 1.125rem;
+  }
+
   &__subtitle {
-    font-size: 1.5rem;
-    padding-left: 5rem;
+    font-size: 1.25rem;
+    padding-left: 0;
+
+    @include respond-to('lg') {
+      font-size: 1.5rem;
+      padding-left: 5rem;
+    }
   }
 
   &__title {
-    font-size: 3rem;
+    font-size: 2.25rem;
     font-weight: 600;
     letter-spacing: -0.025em;
     color: var(--text-primary);
     line-height: 1.15;
-    padding-left: 5rem;
+    padding-left: 0;
 
     @include respond-to('lg') {
       font-size: 4.5rem;
+      padding-left: 5rem;
     }
   }
 
   &__highlight-wrapper {
     position: relative;
     display: inline-block;
-  }
-
-  &__circle-bg {
-    position: absolute;
-    margin-top: 0.5rem;
   }
 
   &__gradient-text {
@@ -137,41 +123,39 @@
   &__description {
     font-size: 1rem;
     color: var(--text-secondary);
-    padding-left: 5rem;
+    padding-left: 0;
     padding-top: 1rem;
+
+    @include respond-to('lg') {
+      padding-left: 5rem;
+    }
   }
 
   &__details {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-    padding-top: 3.75rem;
+    padding-top: 3rem;
     text-align: center;
 
     @include respond-to('lg') {
       text-align: left;
+      padding-top: 3.75rem;
     }
   }
 
   &__typing-title {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--text-primary);
+
+    @include respond-to('lg') {
+      font-size: 3rem;
+    }
   }
 
   &__cursor {
     animation: pulse 1s infinite;
-  }
-
-  &__company-tag {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  &__company-logo {
-    width: 1.25rem;
-    height: 1.25rem;
   }
 
   &__bio {

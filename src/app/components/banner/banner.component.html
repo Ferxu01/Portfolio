@@ -2,17 +2,6 @@
   <div class="hero-banner__container">
     <div class="hero-banner__grid">
       <div class="hero-banner__media">
-        <!-- <div class="hero-banner__avatar-wrapper"> -->
-        <!-- Tooltip Móvil -->
-        <div class="hero-banner__tooltip hero-banner__tooltip--mobile">
-          <div class="hero-banner__greeting-box">
-            <p class="hero-banner__greeting-text">
-              {{ 'HERO_GREETING' | transloco }}
-              <span class="hero-banner__highlight">{{ 'FULL_NAME' | transloco }}</span>
-            </p>
-          </div>
-        </div>
-
         <img
           class="hero-banner__image"
           src="assets/profile/me.jpg"
@@ -20,13 +9,11 @@
           width="300"
           height="300"
         />
-        <!-- </div> -->
       </div>
 
       <div class="hero-banner__content">
-        <!-- Tooltip Desktop -->
-        <div class="hero-banner__tooltip hero-banner__tooltip--desktop">
-          <div class="hero-banner__greeting-box hero-banner__greeting-box--desktop">
+        <div class="hero-banner__tooltip">
+          <div class="hero-banner__greeting-box">
             <p class="hero-banner__greeting-text">
               {{ 'HERO_GREETING' | transloco }}
               <span class="hero-banner__highlight">{{ 'FULL_NAME' | transloco }}</span>

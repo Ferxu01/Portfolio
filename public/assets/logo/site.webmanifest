@@ -1,0 +1,23 @@
+{
+  "name": "Fernando Ortega | Software Engineer",
+  "short_name": "FO Portfolio",
+  "icons": [
+    {
+      "src": "/assets/logo/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/logo/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#7e22ce",
+  "orientation": "portrait-primary",
+  "description": "Portfolio profesional de Fernando Ortega, Software Engineer y Frontend Developer."
+}

@@ -1,5 +1,4 @@
 // 1. Abstracts (Variables and Mixins)
-// @use 'styles/abstracts/variables';
 @use 'styles/abstracts/variables' as *;
 @use 'styles/abstracts/mixins';
 @use 'styles/abstracts/themes';
@@ -7,7 +6,7 @@
 // 2. Base
 @use 'styles/base/reset';
 
-// 3. Components (Clases de diseño globales)
+// 3. Components (Global design classes)
 @use 'styles/components/main-layout';
 @use 'styles/components/header';
 @use 'styles/components/banner';
@@ -16,5 +15,6 @@
 @use 'styles/components/technologies';
 @use 'styles/components/footer';
 
+// 3. Specific Components
 @use 'styles/components/lang-selector';
 @use 'styles/components/theme-toggle';

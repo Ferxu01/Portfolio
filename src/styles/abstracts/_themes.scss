@@ -7,6 +7,13 @@
 
   --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
+  // Altura del header disponible globalmente
+  --header-height: #{$header-height-mobile};
+
+  @include respond-to('md') {
+    --header-height: #{$header-height-desktop};
+  }
+
   @include apply-light-theme;
 }
 

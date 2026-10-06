@@ -1,0 +1,82 @@
+@let item = project();
+
+@if (item) {
+  <article class="project-detail">
+    <a routerLink="/#projects" class="project-detail__back-link">
+      <span class="project-detail__back-icon">←</span> {{ 'PROJECT_DETAIL_BACK_LINK' | transloco }}
+    </a>
+
+    <header class="project-detail__header">
+      <div class="project-detail__title-container">
+        <img class="project-detail__logo" [src]="fullImageUrl()" [alt]="item.title | transloco" />
+        <h1 class="project-detail__title">{{ item.title | transloco }}</h1>
+      </div>
+
+      <p class="project-detail__subtitle">{{ item.subtitle | transloco }}</p>
+
+      <div class="project-detail__tags">
+        @for (tag of item.tags; track tag) {
+          <span class="project-detail__tag">{{ tag }}</span>
+        }
+      </div>
+    </header>
+
+    <div class="project-detail__actions">
+      @if (item.demoUrl) {
+        <a
+          [href]="item.demoUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="project-detail__btn project-detail__btn--primary"
+        >
+          {{ 'PROJECT_DETAIL_LIVE_DEMO' | transloco }}
+        </a>
+      }
+      @if (item.githubUrl) {
+        <a
+          [href]="item.githubUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="project-detail__btn project-detail__btn--secondary"
+        >
+          {{ 'PROJECT_DETAIL_GITHUB_CODE' | transloco }}
+        </a>
+      }
+    </div>
+
+    <div class="project-detail__content">
+      <section class="project-detail__section">
+        <h2 class="project-detail__section-title">
+          {{ 'PROJECT_DETAIL_DESCRIPTION_TITLE' | transloco }}
+        </h2>
+        <p class="project-detail__description">{{ item.description | transloco }}</p>
+      </section>
+
+      @if (item.features.length) {
+        <section class="project-detail__section">
+          <h2 class="project-detail__section-title">
+            {{ 'PROJECT_DETAIL_FEATURES_TITLE' | transloco }}
+          </h2>
+          <ul class="project-detail__list">
+            @for (feature of item.features; track $index) {
+              <li class="project-detail__list-item">{{ feature | transloco }}</li>
+            }
+          </ul>
+        </section>
+      }
+
+      @if (item.architecture && item.architecture.length) {
+        <section class="project-detail__section">
+          <h2 class="project-detail__section-title">
+            {{ 'PROJECT_DETAIL_ARCHITECTURE_TITLE' | transloco }}
+          </h2>
+          <ul class="project-detail__list">
+            @for (tech of item.architecture; track $index) {
+              <li class="project-detail__list-item">{{ tech | transloco }}</li>
+            }
+          </ul>
+        </section>
+      }
+    </div>
+  </article>
+}

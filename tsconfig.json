@@ -11,10 +11,13 @@
     "isolatedModules": true,
     "experimentalDecorators": true,
     "importHelpers": true,
+    "resolveJsonModule": true,
     "target": "ES2022",
     "module": "preserve",
     "paths": {
-      "@core/*": ["./src/app/core/*"]
+      "@assets/*": ["./public/assets/*"],
+      "@core/*": ["./src/app/core/*"],
+      "@pages/*": ["./src/app/pages/*"]
     }
   },
   "angularCompilerOptions": {

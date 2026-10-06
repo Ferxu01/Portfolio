@@ -1,0 +1,66 @@
+[
+  {
+    "id": "genesis",
+    "title": "PROJECT_GENESIS_TITLE",
+    "subtitle": "PROJECT_GENESIS_SUBTITLE",
+    "description": "PROJECT_GENESIS_DESCRIPTION",
+    "tags": ["Angular", "TypeScript", "IoT", "Chart.js", "RxJS", "Electron", "Tailwind CSS"],
+    "imageUrl": "genesis.png",
+    "demoUrl": "https://genesis-demo.example.com",
+    "githubUrl": "https://github.com/Ferxu01/TFG_Genesis2.0",
+    "features": [
+      "PROJECT_GENESIS_FEATURE_1",
+      "PROJECT_GENESIS_FEATURE_2",
+      "PROJECT_GENESIS_FEATURE_3"
+    ],
+    "architecture": [
+      "PROJECT_GENESIS_ARCHITECTURE_1",
+      "PROJECT_GENESIS_ARCHITECTURE_2",
+      "PROJECT_GENESIS_ARCHITECTURE_3",
+      "PROJECT_GENESIS_ARCHITECTURE_4"
+    ]
+  },
+  {
+    "id": "visionary",
+    "title": "PROJECT_VISIONARY_TITLE",
+    "subtitle": "PROJECT_VISIONARY_SUBTITLE",
+    "description": "PROJECT_VISIONARY_DESCRIPTION",
+    "tags": ["Angular", "Tailwind", "SCSS", "Chart.js", "Three.js", "WebGPU", "Node.js", "SQL"],
+    "imageUrl": "visionary.png",
+    "demoUrl": "https://visionary-edu.example.com",
+    "githubUrl": "https://github.com/Ferxu01/visionary",
+    "features": [
+      "PROJECT_VISIONARY_FEATURE_1",
+      "PROJECT_VISIONARY_FEATURE_2",
+      "PROJECT_VISIONARY_FEATURE_3",
+      "PROJECT_VISIONARY_FEATURE_4"
+    ],
+    "architecture": [
+      "PROJECT_VISIONARY_ARCHITECTURE_1",
+      "PROJECT_VISIONARY_ARCHITECTURE_2",
+      "PROJECT_VISIONARY_ARCHITECTURE_3"
+    ]
+  },
+  {
+    "id": "ferplay",
+    "title": "PROJECT_FERPLAY_TITLE",
+    "subtitle": "PROJECT_FERPLAY_SUBTITLE",
+    "description": "PROJECT_FERPLAY_DESCRIPTION",
+    "tags": ["Ionic", "Angular", "Capacitor", "PHP", "Symfony", "Tailwind CSS", "TypeScript"],
+    "imageUrl": "ferplay.png",
+    "demoUrl": "https://ferplay.example.com",
+    "githubUrl": "https://github.com/Ferxu01/ferplay-app",
+    "features": [
+      "PROJECT_FERPLAY_FEATURE_1",
+      "PROJECT_FERPLAY_FEATURE_2",
+      "PROJECT_FERPLAY_FEATURE_3",
+      "PROJECT_FERPLAY_FEATURE_4",
+      "PROJECT_FERPLAY_FEATURE_5"
+    ],
+    "architecture": [
+      "PROJECT_FERPLAY_ARCHITECTURE_1",
+      "PROJECT_FERPLAY_ARCHITECTURE_2",
+      "PROJECT_FERPLAY_ARCHITECTURE_3"
+    ]
+  }
+]

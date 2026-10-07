@@ -27,7 +27,7 @@
     "description": "PROJECT_VISIONARY_DESCRIPTION",
     "tags": ["Angular", "Tailwind", "SCSS", "Chart.js", "Three.js", "WebGPU", "Node.js", "SQL"],
     "imageUrl": "visionary.png",
-    "demoUrl": "https://visionary-edu.example.com",
+    "demoUrl": "https://visionary-io.vercel.app/",
     "githubUrl": "https://github.com/Ferxu01/visionary",
     "features": [
       "PROJECT_VISIONARY_FEATURE_1",

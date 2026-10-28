@@ -6,7 +6,7 @@
     "description": "PROJECT_GENESIS_DESCRIPTION",
     "tags": ["Angular", "TypeScript", "IoT", "Chart.js", "RxJS", "Electron", "Tailwind CSS"],
     "imageUrl": "genesis.png",
-    "demoUrl": "https://genesis-demo.example.com",
+    "demoUrl": "https://tfg-genesis2.vercel.app/",
     "githubUrl": "https://github.com/Ferxu01/TFG_Genesis2.0",
     "features": [
       "PROJECT_GENESIS_FEATURE_1",
